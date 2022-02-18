@@ -14,7 +14,7 @@ Within this project we used a handful of tools.
 
 These tools helped us dig deeply into the csv file we had at hand. 
 
-**ANALYSIS / RESULTS **
+**ANALYSIS/RESULTS**
 
 *DATA PROCESSING*
 
