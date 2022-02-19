@@ -48,15 +48,15 @@ In order to achieve the oal of 75% accuracy I needed to compile, train and evalu
 
 I dropped the EIN and NAME from the table, and consolidated the APPLICATION_TYPE variable.
 
-Hidden nodes layer 1 = 80
-Hidden nodes layer 2 = 30
-Output nodes = 1
-Hidden Layer Activation = RELU
-Output Layer Activation = SIGMOID
-EPOCHS = 100
+- Hidden nodes layer 1 = 80
+- Hidden nodes layer 2 = 30
+- Output nodes = 1
+- Hidden Layer Activation = RELU
+- Output Layer Activation = SIGMOID
+- EPOCHS = 100
 
-ACCURACY = .7320
-LOSS = .5537
+- ACCURACY = .7320
+- LOSS = .5537
 
 This model did not achieve the target goal.
 
