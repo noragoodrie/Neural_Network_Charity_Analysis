@@ -16,7 +16,7 @@ These tools helped us dig deeply into the csv file we had at hand.
 
 **ANALYSIS/RESULTS**
 
-*DATA PROCESSING*
+**DATA PROCESSING**
 
 What variable(s) are considered the target(s) for your model?
 
@@ -38,4 +38,73 @@ What variable(s) are considered to be the features for your model?
 What variable(s) are neither targets nor features, and should be removed from the input data?
 
 - We started off my removing the EIN and the NAME variables.
+- We also ended up dropping the APPLICATION_TYPE and CLASSIFICATION that had a handful of unique values.
 
+**COMPILING, TRAINING, AND EVALUATING**
+
+In order to achieve the oal of 75% accuracy I needed to compile, train and evaluate the model more than once. I was not able to get to a 75% accuracy but I did run 4 different trial models which I will discuess in detail below.
+
+**TRIAL 1**
+
+Increasing the epchos to 200 instead of 100 from the 1st and 2nd deliverable.
+
+Hidden nodes layer 1 = 80
+Hidden nodes layer 2 = 30
+Output nodes = 1
+Hidden Layer Activation = RELU
+Output Layer Activation = SIGMOID
+EPOCHS = 200
+
+ACCURACY = .7249
+LOSS = .6268
+
+This model did not achieve the target goal.
+
+**TRAIL 2**
+
+I ended up changing the RELU to then use TANH to see how that would relate
+
+Hidden nodes layer 1 = 80
+Hidden nodes layer 2 = 30
+Output nodes = 1
+Hidden Layer Activation = TANH
+Output Layer Activation = SIGMOID
+EPOCHS = 100
+
+ACCURACY = .7282
+LOSS = .5604
+
+This model did not achieve the target goal.
+
+**TRIAL 3** 
+
+In this trial i bucketed the INCOME_AMT and dropped the SPECIAL_CONSIDERATIONS_N variables
+
+Hidden nodes layer 1 = 80
+Hidden nodes layer 2 = 30
+Output nodes = 1
+Hidden Layer Activation = RELU
+Output Layer Activation = SIGMOID
+EPOCHS = 100
+
+ACCURACY = .7247
+LOSS = .5624
+
+This model did not achieve the target goal.
+
+**TRIAL 4**
+
+For the final trial I decided to use the same data from the model above but adding another hidden layer
+
+Hidden nodes layer 1 = 80
+Hidden nodes layer 2 = 50
+Hidden nodes layer 3 = 30
+Output nodes = 1
+Hidden Layer Activation = RELU
+Output Layer Activation = SIGMOID
+EPOCHS = 100
+
+ACCURACY = .7287
+LOSS = .5727
+
+This model did not achieve the target goal.
